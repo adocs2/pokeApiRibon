@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  sprite: MyString
+  evolution_chain: 
+
+two:
+  name: MyString
+  type: 
+  sprite: MyString
+  evolution_chain: 
