@@ -11,7 +11,8 @@ class Api::V1::PokemonController < ApiPokemonController
   end
 
   def create
-    @pokemon = Pokemon.new(pokemon_info)
+    last_pokemon_number = Pokemon.last.pokemon_number + 1
+    @pokemon = Pokemon.new(last_pokemon_number, pokemon_info)
 
     if @pokemon.save
       render json:{

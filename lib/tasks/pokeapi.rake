@@ -8,6 +8,7 @@ namespace :gen1 do
       pokemon_evolution_chain_response = HTTParty.get(pokemon_species['evolution_chain']['url'])
 
       #puts pokemon['name']
+      #puts pokemon['id']
       #puts pokemon['sprites']['front_default']
       for type in pokemon['types']
         pokemon_types.push(type['type']['name'])
@@ -21,7 +22,8 @@ namespace :gen1 do
       #puts pokemon_types
       #puts pokemon_evolution_chain
       #puts '-----------'
-      Pokemon.create(name: pokemon['name'], type: pokemon_types, sprite: pokemon['sprites']['front_default'], evolution_chain: pokemon_evolution_chain)
+      Pokemon.create(pokemon_number: pokemon['id'], name: pokemon['name'], type: pokemon_types, sprite: pokemon['sprites']['front_default'], evolution_chain: pokemon_evolution_chain)
     }
+    puts 'task complete'
   end
 end
