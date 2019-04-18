@@ -12,8 +12,12 @@ class Api::V1::PokemonController < ApiPokemonController
   end
 
   def create
-    last_pokemon_number = Pokemon.asc(:created_at).last.pokemon_number + 1
-    @pokemon = Pokemon.new(pokemon_info.merge(pokemon_number: last_pokemon_number))
+    if Pokemon.first.nil?
+      @pokemon = Pokemon.new(pokemon_info.merge(pokemon_number: 1))
+    else
+      last_pokemon_number = Pokemon.asc(:created_at).last.pokemon_number + 1
+      @pokemon = Pokemon.new(pokemon_info.merge(pokemon_number: last_pokemon_number))
+    end
     if @pokemon.save
       render json: {
           status: "success",
@@ -61,7 +65,7 @@ class Api::V1::PokemonController < ApiPokemonController
   end
 
   def pokemon_info
-    params.require(:pokemon).permit(:name, :sprite, :type => [], :evolution_chain => [])
+    params.permit(:name, :sprite, :type => [], :evolution_chain => [])
   end
 
 end
