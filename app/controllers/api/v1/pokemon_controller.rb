@@ -29,6 +29,17 @@ class Api::V1::PokemonController < ApiPokemonController
     end
   end
 
+  def update
+    @pokemon = Pokemon.find(params[:id])
+    @pokemon.update(pokemon_info)
+
+    render json: {
+        status: "success",
+        message: "Pokemon was updated",
+        data: @pokemon
+    }
+  end
+
   def destroy
     @pokemon = Pokemon.find(params[:id])
     @pokemon.destroy
