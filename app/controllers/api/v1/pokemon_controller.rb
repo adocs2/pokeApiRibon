@@ -1,8 +1,9 @@
 class Api::V1::PokemonController < ApiPokemonController
-  before_action :get_pokemon, only:[:show]
+  before_action :get_pokemon, only: [:show]
+
   def index
     @pokemon = Pokemon.all
-    render json:{
+    render json: {
         data: @pokemon
     }
   end
@@ -11,20 +12,20 @@ class Api::V1::PokemonController < ApiPokemonController
   end
 
   def create
-    last_pokemon_number = Pokemon.last.pokemon_number + 1
-    @pokemon = Pokemon.new(last_pokemon_number, pokemon_info)
-
+    last_pokemon_number = Pokemon.asc(:created_at).last.pokemon_number + 1
+    @pokemon = Pokemon.new(pokemon_info.merge(pokemon_number: last_pokemon_number))
     if @pokemon.save
-      render json:{
+      render json: {
           status: "success",
           message: "Pokemon was saved and sent to the PC Storage",
           data: @pokemon
-      } else
-        render json:{
-        status: "error",
-        message: "Error on save your pokemon...",
-        data: @pokemon.errors
-       }
+      }
+    else
+      render json: {
+          status: "error",
+          message: "Error on save your pokemon...",
+          data: @pokemon.errors
+      }
     end
   end
 
@@ -32,7 +33,7 @@ class Api::V1::PokemonController < ApiPokemonController
     @pokemon = Pokemon.find(params[:id])
     @pokemon.destroy
 
-    render json:{
+    render json: {
         status: "success",
         message: "Pokemon was released",
         data: @pokemon
@@ -40,15 +41,16 @@ class Api::V1::PokemonController < ApiPokemonController
   end
 
   private
+
   def get_pokemon
     @pokemon = Pokemon.find(params[:id])
-    render json:{
+    render json: {
         data: @pokemon
     }
   end
 
   def pokemon_info
-    params.permit(:name, :type, :sprite, :evolution_chain)
+    params.require(:pokemon).permit(:name, :sprite, :type => [], :evolution_chain => [])
   end
 
 end
