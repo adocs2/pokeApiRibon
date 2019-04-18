@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Project using Rails and MongoId, make sure you have mongoDB in your computer before use.
 
-Things you may want to cover:
+##### To populate the database run the task: 
+* rake gen1:addAllPokemons
 
-* Ruby version
+##### Deploy rails server: 
+* rails s
 
-* System dependencies
+##### Any question please contact me by email:
+* afonso-dias2011@hotmail.com
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a43a88ca-44c4-4a45-97b9-e2bc1d42c59b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/factories/pokemon.rb" afterDir="false" />
+    <list default="true" id="a43a88ca-44c4-4a45-97b9-e2bc1d42c59b" name="Default Changelist" comment="feat: adding factory_girl gem + creating tests for controller methods + creating factory for pokemon + changing login in create pokemon method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/pokemon_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/pokemon_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controller/api/v1/pokemon_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controller/api/v1/pokemon_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/pokemon_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/pokemon_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/tasks/pokeapi.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/pokeapi.rake" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/controller/api/v1/pokemon_controller_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -77,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/lib/tasks/pokeapi.rake">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -87,6 +82,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="505">
               <caret line="157" column="31" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -161,7 +168,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/pokemons_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api_pokemon_controller.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/pokeapi.rake" />
         <option value="$PROJECT_DIR$/config/initializers/cors.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/models/pokemon.rb" />
@@ -172,6 +178,8 @@
         <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
         <option value="$PROJECT_DIR$/spec/controller/api/v1/pokemon_controller_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/pokemon.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/pokeapi.rake" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -279,7 +287,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555626630496" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555629263042" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -312,7 +320,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555213694041</updated>
-      <workItem from="1555213704793" duration="30292000" />
+      <workItem from="1555213704793" duration="31588000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1555220797509</created>
@@ -363,11 +371,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555618162101</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: adding factory_girl gem + creating tests for controller methods + creating factory for pokemon + changing login in create pokemon method">
+      <created>1555626936842</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555626936842</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30292000" />
+    <option name="totallyTimeSpent" value="31588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -415,7 +430,8 @@
     <MESSAGE value="fix: fixing create method on pokemon controller" />
     <MESSAGE value="feat: adding validation in pokemon model + adding rspec to project + testing pokemon model" />
     <MESSAGE value="feat: creating update pokemon method" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: creating update pokemon method" />
+    <MESSAGE value="feat: adding factory_girl gem + creating tests for controller methods + creating factory for pokemon + changing login in create pokemon method" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adding factory_girl gem + creating tests for controller methods + creating factory for pokemon + changing login in create pokemon method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
@@ -474,13 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="157" column="31" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/pokemon_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -492,13 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/pokeapi.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -534,6 +536,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mongoid.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="157" column="31" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/pokeapi.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
